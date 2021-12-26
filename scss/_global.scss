@@ -1,0 +1,12 @@
+@import "variable";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  background-color: $Strong-cyan;
+  font-family: monospace;
+}

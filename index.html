@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/main.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- <title>Frontend Mentor | Tip calculator app</title> -->
+  </head>
+  <body>
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo" />
+    </div>
+    <div class="card">
+      <div class="input-section">
+        <p>Bill</p>
+        <input type="number" name="bill-amount" id="bill" placeholder="0" />
+        <p>Select Tip %</p>
+        <div class="tip-select">
+          <button value="5" onclick="storeValue(this)" onmouseup="mUp(this)">
+            5%
+          </button>
+          <button value="10" onclick="storeValue(this)" onmouseup="mUp(this)">
+            10%
+          </button>
+          <button value="15" onclick="storeValue(this)" onmouseup="mUp(this)">
+            15%
+          </button>
+          <button value="25" onclick="storeValue(this)" onmouseup="mUp(this)">
+            25%
+          </button>
+          <button value="50" onclick="storeValue(this)" onmouseup="mUp(this)">
+            50%
+          </button>
+          <input
+            type="number"
+            name="custom"
+            id="custom"
+            placeholder="Custom"
+            onchange="storeValue(this)"
+            onclick="checkIndividual()"
+          />
+        </div>
+        <p>Number of People</p>
+        <input
+          type="number"
+          name="people"
+          id="people"
+          placeholder="0"
+          onchange="calculateTotalAmount()"
+        />
+        <div id="message">
+          <p>Can't be zero</p>
+        </div>
+      </div>
+      <div class="display-section">
+        <div class="tip-amount">
+          <p>
+            Tip Amount <br />
+            / person
+          </p>
+          <h1 id="tip">$0.00</h1>
+        </div>
+        <div class="total-amount">
+          <p>
+            Total <br />
+            / person
+          </p>
+          <h1 id="total">$0.00</h1>
+        </div>
+        <button onclick="reset()">RESET</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
